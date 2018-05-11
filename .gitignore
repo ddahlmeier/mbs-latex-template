@@ -1,3 +1,10 @@
+## emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.\#*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
