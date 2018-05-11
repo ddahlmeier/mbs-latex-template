@@ -1,3 +1,11 @@
+\newcommand{\EMBAATitle}{Assignment Title}
+\newcommand{\EMBALecturer}{Prof LecturerFirstName LecturerLastName}
+\newcommand{\EMBATestType}{Test Type of Assignment}
+\newcommand{\EMBAParticipant}{ParticipantFirstName ParticipantLastName}
+\newcommand{\EMBAClass}{Mannheim Executive MBA 2019}
+\newcommand{\EMBACourse}{Name of the Course}
+\newcommand{\EMBALocation}{Mannheim}
+
 \documentclass[
     12pt	% font size 12 points
     ]{article}
@@ -11,34 +19,30 @@
  }
 
 
-
 \begin{document}  
 \begin{titlepage}
 \begin{center}
 
-{\Large Assignment Title}
+{\Large \EMBAATitle}
 \vspace{1cm}
 
-{
-\large Prof LecturerFirstName LecturerLastName
+{\large \EMBALecturer}
 \vspace{2cm}
 
-Type of Assignment
+{\EMBATestType}
 \vspace{1cm}
 
-Participant
-
-Mannheim Executive MBA 2018
+{\EMBAParticipant}
 \vspace{1cm}
 
+{\EMBAClass}
+\vspace{1cm}
 
-Date
-}
+\today
 
+\vspace{2cm}
 
-\vspace{3cm}
-
-Declaration of Authorship (<name of course> / <assignment>)
+Declaration of Authorship (\EMBACourse / \EMBAATitle)
 \vspace{0.5cm}
 
 I hereby declare that the paper presented is my own work and that I
@@ -54,13 +58,13 @@ and sent anonymously in order to be checked for plagiarism.  I am
 aware that if this declaration is not made, the paper may not be
 graded.
 
-\vspace{2cm}
+\vspace{1cm}
 Signature
 
-(Student’s name in printed characters)
+\vspace{2cm}
+{\EMBAParticipant}
 
-Location, Date
-
+{\EMBALocation, \today}
 
 \end{center}
 
