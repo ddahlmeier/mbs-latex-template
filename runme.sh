@@ -2,6 +2,8 @@
 
 # typeset assignment using pdflatex and bibtex
 
+pdflatex titlepage.tex
+
 pdflatex assignment.tex && \
 bibtex assignment && \
 pdflatex assignment.tex && \
