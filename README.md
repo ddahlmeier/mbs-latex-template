@@ -13,7 +13,7 @@ Latex template from Chair of general managent and information system at Universi
 ## Generate Title Page
 
 ```bash
-./runme-title.sh
+./runme-titlepage.sh
 ```
 
 ## Generate Body
