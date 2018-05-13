@@ -1,21 +1,58 @@
+% ------------------------------------------------------------------------
+%
+% Variables
+%
+% ------------------------------------------------------------------------
+\newcommand{\EMBALecturer}{Prof LecturerFirstName LecturerLastName}
+\newcommand{\EMBAAssignmentType}{Type of Assignment}
+\newcommand{\EMBAParticipant}{ParticipantFirstName ParticipantLastName}
+\newcommand{\EMBAClass}{Mannheim Executive MBA 2019}
+\newcommand{\EMBACourse}{Name of the Course}
+\newcommand{\EMBALocation}{Mannheim}
+
+
+% ------------------------------------------------------------------------
+%
+% Preamble
+%
+% ------------------------------------------------------------------------
 \documentclass[
-    12pt	% font size 12 points
+    12pt                               % Font size 12 points
     ]{article}
 
-\usepackage[english]{babel} % English word breaks
-\usepackage{indentfirst} % intent first paragraph
-\usepackage{times} % Times New Roman font
-\usepackage{natbib} % for Chicago style references
-\usepackage[onehalfspacing]{setspace} % set line spacing
-\usepackage{acro} % abbreviations
-\usepackage{geometry} % set page margins
+\usepackage[utf8]{inputenc}            % Accept German characters
+\usepackage{lmodern}                   % High quality fonts
+\usepackage[english]{babel}            % English word breaks
+\usepackage{indentfirst}               % intent first paragraph
+\usepackage{times}                     % Times New Roman font
+\usepackage{courier}                   % Monospace for inline fixed text with \texttt
+\usepackage{natbib}                    % Chicago style references
+\usepackage[onehalfspacing]{setspace}  % Line spacing
+\usepackage{acro}                      % Abbreviations
+
+\usepackage[pdftex,
+            pdfauthor=,                % Do NOT specify author!
+            pdftitle=\EMBACourse,      % PDF Title
+            pdfsubject=\EMBAClass,     % PDF Subject
+            hidelinks]                 % Hyperlinks
+            {hyperref}
+
+\usepackage{geometry}                  % Page margins
 \geometry{
- a4paper,
- left=25mm,
- right=25mm
- }
+  a4paper,
+  left=25mm,
+  right=25mm
+}
+
+\author{}                             % Do NOT specify author!
 
 
+
+% ------------------------------------------------------------------------
+%
+% Acronyms
+%
+% ------------------------------------------------------------------------
 \DeclareAcronym{ny}{
   short = NY ,
   long  = New York ,
@@ -23,75 +60,83 @@
 }
 
 
+% ------------------------------------------------------------------------
+%
+% Lead
+%
+% ------------------------------------------------------------------------
+
 \title{Assignment Title}
 
 \begin{document}  
 
 \maketitle
 
-% set pargraph indent to 5 spaces
+% set paragraph indent to 5 spaces
 \settowidth{\parindent}{~~~~~}
 
 \tableofcontents
 \listoffigures
 \listoftables
 
-\section{Question1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum. \ac{ny}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum. \ac{ny}
+% ------------------------------------------------------------------------
+%
+% Content
+%
+% ------------------------------------------------------------------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum. \ac{ny}
+\section{Basic Commands}
 
-\section{Question2}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum. Citations
-within the text appear in parentheses as \citep{zorlu2005effect} or,
-if the author’s name appears in the text itself, as
-\citet{zorlu2005effect}.
+German characters, such as Ä und ö, can only be typed directly if you
+make use of the \texttt{texttt} package.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum. \ac{ny}
+You reference acronyms, such as \ac{ny}, using the \texttt{ac} command.
+The first time you use the acronym, it appears in full. From that point
+onwards it will only be rendered in compact form.
 
+
+\section{Citations}
+
+The Chicago bitation has two styles: within the text they appear in 
+parentheses as \citep{zorlu2005effect} or, if the author’s name appears
+in the text itself, as \citet{zorlu2005effect}.
+
+
+% ------------------------------------------------------------------------
+%
+% Bibliography
+%
+% ------------------------------------------------------------------------
 
 \bibliographystyle{chicago}
 \bibliography{references}
 
 
-
+% ------------------------------------------------------------------------
+%
+% Appendix
+%
+% ------------------------------------------------------------------------
 
 \appendix
-\section{First part of appendix}
+\section{Reference Material}
+
+Write content as normally here.
+
+
+\section{Use Cases}
+
+Even more reference material.
+
+
+% ------------------------------------------------------------------------
+%
+% Acronyms
+%
+% ------------------------------------------------------------------------
 
 \printacronyms[include-classes=abbrev,name=Abbreviations]
 
-
 \end{document}
+% eof

@@ -1,47 +1,75 @@
+% ------------------------------------------------------------------------
+%
+% Variables
+%
+% ------------------------------------------------------------------------
 \newcommand{\EMBALecturer}{Prof LecturerFirstName LecturerLastName}
-\newcommand{\EMBATestType}{Test Type of Assignment}
+\newcommand{\EMBAAssignmentType}{Type of Assignment}
 \newcommand{\EMBAParticipant}{ParticipantFirstName ParticipantLastName}
 \newcommand{\EMBAClass}{Mannheim Executive MBA 2019}
 \newcommand{\EMBACourse}{Name of the Course}
 \newcommand{\EMBALocation}{Mannheim}
 
+
+% ------------------------------------------------------------------------
+%
+% Preamble
+%
+% ------------------------------------------------------------------------
 \documentclass[
-    12pt	% font size 12 points
+    12pt                                % Font size 12 points
     ]{article}
 
-\usepackage{times} % Times New Roman font
-\usepackage{geometry} % set page margins
-\usepackage{graphicx}
-\geometry{
- a4paper,
- left=25mm,
- right=25mm
- }
+\usepackage[utf8]{inputenc}             % Accept German characters
+\usepackage{lmodern}                    % High quality fonts
+\usepackage{times}                      % Times New Roman font
+\usepackage{graphicx}                   % Figures
+
+\usepackage[pdftex,
+            pdfauthor=\EMBAParticipant, % Do NOT specify author!
+            pdftitle=\EMBACourse,       % PDF Title
+            pdfsubject=\EMBAClass,      % PDF Subject
+            hidelinks]{hyperref}        % Hyperlinks
+
+\usepackage{geometry}                   % Page margins
+\geometry{                              % Page margins
+  a4paper,
+  left=25mm,
+  right=25mm
+}
 
 
-\begin{document}  
+% ------------------------------------------------------------------------
+%
+% Content
+%
+% ------------------------------------------------------------------------
+
+\begin{document}
 \begin{titlepage}
 \begin{center}
 
-{\Large \EMBACourse}
+{\LARGE \EMBACourse}
+
+\vspace{0.5cm}
+{\Large \EMBALecturer}
+
 \vspace{1cm}
+{\EMBAAssignmentType}
 
-{\large \EMBALecturer}
-\vspace{2cm}
-
-{\EMBATestType}
-
+\vspace{0.5cm}
 {\EMBAParticipant}
 
+\vspace{0.5cm}
 {\EMBAClass}
 
 \vspace{1cm}
-
 \today
+
 
 \vspace{2.5cm}
 
-Declaration of Authorship (\EMBACourse / \EMBATestType)
+Declaration of Authorship ({\EMBACourse} / \EMBAAssignmentType)
 \vspace{0.5cm}
 \end{center}
 
@@ -73,3 +101,5 @@ graded.
 
 \end{titlepage}
 \end{document}
+
+%
