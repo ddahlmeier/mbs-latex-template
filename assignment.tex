@@ -29,6 +29,7 @@
 \usepackage{natbib}                    % Chicago style references
 \usepackage[onehalfspacing]{setspace}  % Line spacing
 \usepackage{acro}                      % Abbreviations
+\usepackage{graphicx}                  % Figures
 
 \usepackage[pdftex,
             pdfauthor=,                % Do NOT specify author!
@@ -46,6 +47,7 @@
 
 \author{}                             % Do NOT specify author!
 
+\graphicspath{ {img/} }               % Take images from img/
 
 
 % ------------------------------------------------------------------------
@@ -89,7 +91,15 @@
 \section{Basic Commands}
 
 German characters, such as Ä und ö, can only be typed directly if you
-make use of the \texttt{texttt} package.
+make use of the \texttt{texttt} package. And you can reference pictures,
+by informing the reader that figure \ref{fig:name-of-fig} is important.
+
+\begin{figure}[t]
+\includegraphics[width=4cm]{signature.png}
+\centering
+\caption{Caption of the Figure}
+\label{fig:name-of-fig}
+\end{figure}
 
 You reference acronyms, such as \ac{ny}, using the \texttt{ac} command.
 The first time you use the acronym, it appears in full. From that point
