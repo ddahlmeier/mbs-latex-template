@@ -5,6 +5,9 @@
 /.emacs.desktop.lock
 .\#*
 
+## do not check in pdf outputs
+*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
