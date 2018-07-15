@@ -2,5 +2,5 @@
 
 # typeset assignment using pdflatex and bibtex
 
-pdflatex titlepage.tex
+pdflatex MBSTemplate_TitlePage.tex
 

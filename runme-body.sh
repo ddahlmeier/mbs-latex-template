@@ -2,7 +2,7 @@
 
 # typeset assignment using pdflatex and bibtex
 
-pdflatex assignment.tex && \
-bibtex assignment && \
-pdflatex assignment.tex && \
-pdflatex assignment.tex 
+pdflatex MBSTemplate_BodyText.tex && \
+bibtex MBSTemplate_BodyText && \
+pdflatex MBSTemplate_BodyText.tex && \
+pdflatex MBSTemplate_BodyText.tex 
